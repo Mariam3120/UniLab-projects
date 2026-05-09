@@ -153,7 +153,6 @@ label {
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
 }
 @media (min-width: 76.8rem) {
@@ -548,9 +547,9 @@ label {
 .testimonial {
   height: 100%;
   padding: 2.4rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1019607843);
   border-radius: 2rem;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 .testimonial__stars {
   height: 2rem;

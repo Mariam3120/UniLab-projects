@@ -11,8 +11,8 @@
 
   &__top {
     display: flex;
-    gap: 2rem;
-    margin-bottom: 3.2rem;
+    gap: variables.$space-xl;
+    margin-bottom: variables.$space-3xl;
 
     @include mixins.from-desktop {
       align-items: center;
@@ -32,10 +32,10 @@
 
   &__controls {
     display: flex;
-    gap: 1.6rem;
+    gap: variables.$space-lg;
 
     @include mixins.from-desktop {
-      gap: 2.4rem;
+      gap: variables.$space-2xl;
     }
   }
 
@@ -58,7 +58,7 @@
 
   &__list {
     display: flex;
-    gap: 2rem;
+    gap: variables.$space-xl;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -96,9 +96,9 @@
 .testimonial {
   height: 100%;
   padding: 2.4rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid variables.$color-border-testimonials;
   border-radius: 2rem;
-  background-color: #ffffff;
+  background-color: variables.$color-bg;
 
   &__stars {
     height: 2rem;

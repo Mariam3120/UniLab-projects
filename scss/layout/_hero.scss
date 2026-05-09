@@ -17,7 +17,8 @@
 }
 
 .hero-content {
-  @include mixins.flex-column;
+  display: flex;
+  flex-direction: column;
   gap: variables.$space-xl;
   @include mixins.from-desktop {
     flex: 1;
