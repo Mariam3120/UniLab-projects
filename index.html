@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!--HEADER STARTS HERE-->
     <header class="primary-header">
       <div class="container">
         <div class="nav-wrapper">
@@ -74,7 +75,11 @@
         </div>
       </div>
     </header>
+    <!--HEADER ENDS HERE-->
+
     <main>
+      <!--HERO STARTS HERE-->
+
       <section class="hero">
         <div class="hero-wrapper">
           <div class="hero-content">
@@ -100,7 +105,7 @@
               </div>
             </article>
           </div>
-          <div class="hero-images">
+          <figure class="hero-images">
             <img
               class="main-photo"
               src="assets/img/hero.jpg"
@@ -108,9 +113,11 @@
             />
             <img class="dec-photo photo1" src="assets/img/hero1.png" alt="" />
             <img class="dec-photo photo2" src="assets/img/hero2.png" alt="" />
-          </div>
+          </figure>
         </div>
       </section>
+      <!--HERO ENDS HERE-->
+      <!--PARTNERS START HERE-->
       <section class="partners">
         <ul class="partners-list">
           <li><img src="assets/img/Group.png" alt="Versace" /></li>
@@ -120,6 +127,8 @@
           <li><img src="assets/img/calvin.png" alt="Calvin Klein" /></li>
         </ul>
       </section>
+      <!--PARTNERS END HERE-->
+      <!--ARRIVALS START HERE-->
       <section class="arrivals">
         <div class="arrivals__wrapper">
           <h2 class="arrivals__title">New Arrivals</h2>
@@ -213,6 +222,8 @@
           </a>
         </div>
       </section>
+      <!--ARRIVALS END HERE-->
+      <!--CUSTOMERS START HERE-->
 
       <section class="customers" aria-label="Customer testimonials">
         <div class="customers__wrapper">
@@ -331,7 +342,7 @@
               </article>
             </li>
 
-               <li class="customers__item">
+            <li class="customers__item">
               <article class="testimonial">
                 <img
                   class="testimonial__stars"
@@ -354,123 +365,145 @@
                 </p>
               </article>
             </li>
-
-
-            <!-- add more testimonials as needed -->
           </ul>
         </div>
       </section>
+      <!--CUSTOMERS END HERE-->
+      <!--OFFERS START HERE-->
       <section class="offers">
         <div class="offers__wrapper">
-          <h2 class="offers__title">
-            STAY UPTO DATE ABOUT OUR LATEST OFFERS
-          </h2>
+          <h2 class="offers__title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
           <form class="offers__form" action="/submit-data" method="POST">
-            <input type="email" class="offers__input" id="user-email" name="email" placeholder="Enter your email address" required>
-            <button type="submit" class="offers__submit">Subscribe to Newsletter</button>
+            <input
+              type="email"
+              class="offers__input"
+              id="user-email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit" class="offers__submit">
+              Subscribe to Newsletter
+            </button>
           </form>
         </div>
-
       </section>
+      <!--OFFERS END HERE-->
+      <!--FOOTER-->
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__brand">
+            <h3 class="footer__logo">SHOP.CO</h3>
+            <p class="footer__tagline">
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
 
-     <footer class="footer">
-  <div class="footer__wrapper">
-    <div class="footer__brand">
-      <h3 class="footer__logo">SHOP.CO</h3>
-      <p class="footer__tagline">
-        We have clothes that suits your style and which you're proud to wear.
-        From women to men.
-      </p>
+            <ul class="footer__socials">
+              <li>
+                <a href="#" class="footer__social-link" aria-label="Twitter">
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M459.4 151.7c..." />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                  >
+                    <path d="M80 299.3..." />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path d="M224.3 141a115..." />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="footer__social-link" aria-label="GitHub">
+                  <svg
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M252.8 8c-138.7..." />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-      <ul class="footer__socials">
-        <li>
-          <a href="#" class="footer__social-link" aria-label="Twitter">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path d="M459.4 151.7c..."/>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer__social-link" aria-label="Facebook">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <path d="M80 299.3..."/>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer__social-link" aria-label="Instagram">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path d="M224.3 141a115..."/>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="footer__social-link" aria-label="GitHub">
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <path d="M252.8 8c-138.7..."/>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
+          <nav class="footer__nav" aria-label="Footer">
+            <div class="footer__column">
+              <h3 class="footer__heading">Company</h3>
+              <ul class="footer__links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+            </div>
 
-    <nav class="footer__nav" aria-label="Footer">
-      <div class="footer__column">
-        <h3 class="footer__heading">Company</h3>
-        <ul class="footer__links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Career</a></li>
-        </ul>
-      </div>
+            <div class="footer__column">
+              <h3 class="footer__heading">Help</h3>
+              <ul class="footer__links">
+                <li><a href="#">Customer Support</a></li>
+                <li><a href="#">Delivery Details</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
 
-      <div class="footer__column">
-        <h3 class="footer__heading">Help</h3>
-        <ul class="footer__links">
-          <li><a href="#">Customer Support</a></li>
-          <li><a href="#">Delivery Details</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
+            <div class="footer__column">
+              <h3 class="footer__heading">FAQ</h3>
+              <ul class="footer__links">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Manage Deliveries</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Payments</a></li>
+              </ul>
+            </div>
 
-      <div class="footer__column">
-        <h3 class="footer__heading">FAQ</h3>
-        <ul class="footer__links">
-          <li><a href="#">Account</a></li>
-          <li><a href="#">Manage Deliveries</a></li>
-          <li><a href="#">Orders</a></li>
-          <li><a href="#">Payments</a></li>
-        </ul>
-      </div>
+            <div class="footer__column">
+              <h3 class="footer__heading">Resources</h3>
+              <ul class="footer__links">
+                <li><a href="#">Free eBooks</a></li>
+                <li><a href="#">Development Tutorial</a></li>
+                <li><a href="#">How to - Blog</a></li>
+                <li><a href="#">Youtube Playlist</a></li>
+              </ul>
+            </div>
+          </nav>
 
-      <div class="footer__column">
-        <h3 class="footer__heading">Resources</h3>
-        <ul class="footer__links">
-          <li><a href="#">Free eBooks</a></li>
-          <li><a href="#">Development Tutorial</a></li>
-          <li><a href="#">How to - Blog</a></li>
-          <li><a href="#">Youtube Playlist</a></li>
-        </ul>
-      </div>
-    </nav>
+          <div class="footer__bottom">
+            <p class="footer__copyright">
+              Shop.co © 2000-2023, All Rights Reserved
+            </p>
 
-    <div class="footer__bottom">
-      <p class="footer__copyright">
-        Shop.co &copy; 2000-2023, All Rights Reserved
-      </p>
-
-      <ul class="footer__payments" aria-label="Accepted payment methods">
-        <li><img src="assets/img/Badge.png" alt="Visa" /></li>
-        <li><img src="assets/img/Badge2.png" alt="Mastercard" /></li>
-        <li><img src="assets/img/Badge3.png" alt="PayPal" /></li>
-        <li><img src="assets/img/Badge4.png" alt="Apple Pay" /></li>
-        <li><img src="assets/img/Badge5.png" alt="Google Pay" /></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+            <ul class="footer__payments" aria-label="Accepted payment methods">
+              <li><img src="assets/img/Badge.png" alt="Visa" /></li>
+              <li><img src="assets/img/Badge2.png" alt="Mastercard" /></li>
+              <li><img src="assets/img/Badge3.png" alt="PayPal" /></li>
+              <li><img src="assets/img/Badge4.png" alt="Apple Pay" /></li>
+              <li><img src="assets/img/Badge5.png" alt="Google Pay" /></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="script.js"></script>
   </body>

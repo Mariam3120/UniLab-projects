@@ -140,6 +140,7 @@ label {
 .hero-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 76.8rem) {
   .hero-wrapper {
@@ -152,6 +153,7 @@ label {
 .hero-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 @media (min-width: 76.8rem) {
@@ -201,6 +203,7 @@ label {
 .hero-statistics .stat-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 }
 .hero-statistics .stat-card:first-child::after {
