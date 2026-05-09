@@ -1,0 +1,162 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.hero {
+  background-color: variables.$color-bg-hero;
+  padding: variables.$space-xl variables.$space-lg 0;
+  width: 100%;
+}
+
+.hero-wrapper {
+  @include mixins.flex-column;
+  @include mixins.from-desktop {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+}
+
+.hero-content {
+  @include mixins.flex-column;
+  gap: variables.$space-xl;
+  @include mixins.from-desktop {
+    flex: 1;
+    padding-inline: variables.$space-lg;
+  }
+  .hero-title {
+    font-weight: variables.$fw-bold;
+    font-size: variables.$fs-fluid-hero-title;
+    line-height: variables.$fs-fluid-hero-line;
+    font-family: variables.$font-display;
+  }
+
+  .hero-txt {
+    font-weight: variables.$fw-regular;
+    font-size: variables.$fs-fluid-body;
+    line-height: 2.2rem;
+    color: variables.$color-text-dark-muted;
+  }
+  .hero-btn {
+    width: 100%; // mob full width
+    background-color: variables.$color-text;
+    border-radius: 6.2rem;
+    padding: variables.$btn-padding;
+    span {
+      font-weight: variables.$fw-medium;
+      font-size: variables.$fs-md;
+      color: variables.$color-bg;
+    }
+    @include mixins.from-desktop {
+      width: auto;
+      align-self: flex-start;
+      min-width: variables.$btn-min-width;
+    }
+  }
+}
+
+.hero-statistics {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: variables.$space-2xl;
+  justify-content: center;
+  margin-top: variables.$space-xl;
+
+  .stat-card {
+    @include mixins.flex-column;
+    position: relative;
+    &:first-child::after {
+      content: "";
+      position: absolute;
+      right: -1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0.1rem;
+      height: 70%;
+      background-color: #0000001a;
+    }
+    @include mixins.from-desktop {
+      &:first-child::after {
+        content: none;
+      }
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -1.6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.1rem;
+        height: 70%;
+        background-color: #0000001a;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: 1 / -1;
+      align-items: center;
+    }
+
+    .stat-number {
+      font-weight: variables.$fw-bold;
+      font-size: variables.$fs-fluid-stat-num;
+    }
+
+    .stat-txt {
+      font-weight: variables.$fw-regular;
+      font-size: variables.$fs-fluid-stat-txt;
+      line-height: 2.2rem;
+      color: variables.$color-text-dark-muted;
+    }
+  }
+
+  @include mixins.from-desktop {
+    grid-template-columns: repeat(3, auto);
+    justify-content: start;
+    gap: variables.$space-3xl;
+
+    .stat-card:nth-child(3) {
+      grid-column: auto;
+      align-items: flex-start;
+    }
+  }
+}
+
+.hero-images {
+  width: 100%;
+  max-width: 39rem;
+  height: 44.8rem;
+  position: relative;
+  flex-shrink: 0;
+  @include mixins.from-desktop {
+    flex: 1;
+    max-width: none;
+    width: auto;
+    height: auto;
+    height: clamp(44.8rem, 36.81rem + 20.48vw, 66.3rem);
+  }
+  .main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  .dec-photo {
+    position: absolute;
+    width: 10%;
+
+    &.photo1 {
+      width: clamp(4.4rem, 3.96rem + 1.14vw, 5.6rem);
+      height: clamp(4.4rem, 3.96rem + 1.14vw, 5.6rem);
+      top: 30%;
+      left: 7%;
+    }
+
+    &.photo2 {
+      width: clamp(7.6rem, 6.56rem + 2.67vw, 10.4rem);
+      height: clamp(7.6rem, 6.56rem + 2.67vw, 10.4rem);
+      top: 9%;
+      left: 75%;
+    }
+  }
+}

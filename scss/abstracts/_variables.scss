@@ -1,0 +1,71 @@
+$font-display: 'Archivo Black', sans-serif; // for headings 
+$font-body: 'Satoshi', sans-serif;          // for body text
+
+
+//FONT WEIGHT 
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+
+// FONT SIZES
+$fs-xs: 1.2rem;
+$fs-sm: 1.4rem;
+$fs-md: 1.6rem;      
+$fs-lg: 2rem;
+$fs-xl: 2.4rem;
+$fs-2xl: 3.2rem;
+$fs-3xl: 4rem;
+$fs-4xl: 4.8rem;
+$fs-5xl: 6.4rem;
+
+// Mobile-specific font sizes
+$fs-mobile-sm: 2.5rem;
+$fs-mobile-md: 2.8rem;
+$fs-mobile-lg: 3.6rem;
+
+// SPACING
+$space-xs: 0.4rem;
+$space-sm: 0.8rem;
+$space-md: 1.2rem;
+$space-lg: 1.6rem;
+$space-xl: 2rem;
+$space-2xl: 2.4rem;
+$space-3xl: 3.2rem;
+$space-4xl: 4rem;
+$space-5xl: 4.8rem;
+
+// BORDER RADIUS
+$radius-pill: 6.2rem;
+
+// Fluid font sizes 
+$fs-fluid-hero-title: clamp(3.6rem, 2.56rem + 2.67vw, 6.4rem);
+$fs-fluid-hero-line:  clamp(3.4rem, 2.29rem + 2.86vw, 6.4rem);
+$fs-fluid-body:       clamp(1.4rem, 1.33rem + 0.19vw, 1.6rem);
+$fs-fluid-stat-num:   clamp(2.4rem, 1.81rem + 1.52vw, 4rem);
+$fs-fluid-stat-txt:   clamp(1.2rem, 1.05rem + 0.38vw, 1.6rem);
+
+// Component sizing
+$nav-padding: $space-xl $space-lg;       // 2rem 1.6rem
+$drawer-padding: 12rem $space-2xl $space-2xl;
+$btn-padding: 1.6rem 5.4rem;
+$btn-min-width: 21rem;
+$hero-img-max-mobile: 39rem;
+$hero-img-height-mobile: 44.8rem;
+$hero-img-height-fluid: clamp(44.8rem, 36.81rem + 20.48vw, 66.3rem);
+
+// LAYOUT
+$container-width: 124rem;
+
+//colors
+$color-text: #000000;
+$color-text-muted: #8d8d8d;
+$color-bg: #FFFFFF;
+
+$color-bg-hero: #f2f0f1;
+$color-text-dark-muted: #00000099;
+
+
+
+
+// $breakpoint-lg: 992px;

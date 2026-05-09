@@ -1,0 +1,66 @@
+@use "./variables";
+//რესპონსივისთვის, პარამეტრი რომელსაც ცვლადიდან წამოვიღებ და კონტენტი რომელსაც გარედან მიიღებს
+// @mixin respond-to($breakpoint) {
+//   @media (min-width: $breakpoint) {
+//     @content;
+//   }
+// }
+@mixin from-desktop {
+  @media (min-width: 76.8rem) {
+    @content;
+  }
+}
+
+@mixin below-desktop {
+  @media (max-width: 76.79rem) {
+    @content;
+  }
+}
+
+
+// Flex mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

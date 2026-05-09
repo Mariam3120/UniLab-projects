@@ -1,0 +1,151 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 12rem 1.6rem 4rem; 
+  font-size: 1.4rem;
+
+  @include mixins.from-desktop {
+    padding: 14rem 1.6rem 4rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 1fr;
+
+    @include mixins.from-desktop {
+      grid-template-columns: minmax(24rem, 1fr) 3fr;
+      gap: 8rem;
+      max-width: variables.$container-width;
+      margin: 0 auto;
+    }
+  }
+
+ 
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__logo {
+    font-family: variables.$font-display;
+    font-size: clamp(2.8rem, 2.4rem + 1vw, 3.2rem);
+    font-weight: variables.$fw-bold;
+    text-transform: uppercase;
+  }
+
+  &__tagline {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #00000099;
+    max-width: 35rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #00000033;
+    color:#000000;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      fill: currentColor;
+    }
+
+    &:hover {
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+
+ 
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem 2rem;
+
+    @include mixins.from-desktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 2rem;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    font-weight: variables.$fw-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    a {
+      font-size: 1.4rem;
+      color: #00000099;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+
+
+  &__bottom {
+    grid-column: 1 / -1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    padding-top: 2rem;
+    border-top: 1px solid #0000001A;
+
+    @include mixins.from-desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+    color: #00000099;
+    text-align: center;
+
+    @include mixins.from-desktop {
+      text-align: left;
+    }
+  }
+
+  &__payments {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+}

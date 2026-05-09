@@ -1,0 +1,89 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+//navigation
+.nav-wrapper {
+  width: 100%;
+  padding: variables.$nav-padding;
+  @include mixins.flex-between;
+  @include mixins.from-desktop {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+  }
+}
+
+.nav-start {
+  @include mixins.flex-start;
+  gap: variables.$space-lg;
+
+  @include mixins.from-desktop {
+    gap: 4rem;
+  }
+}
+
+.logo {
+  font-family: variables.$font-display;
+  font-weight: variables.$fw-bold;
+  font-size: variables.$fs-mobile-sm;
+  line-height: 1;
+}
+
+.primary-navigation {
+  .nav-list {
+    display: flex;
+    gap: variables.$space-xl;
+
+    a {
+      font-size: variables.$fs-md;
+      color: variables.$color-text-muted;
+      &:hover,
+      &:focus-visible {
+        color: variables.$color-text;
+      }
+    }
+  }
+
+  @include mixins.below-desktop {
+    // mobile drawer
+    position: fixed;
+    inset: 0;
+    padding: variables.$drawer-padding;
+    background-color: variables.$color-bg;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    &[data-visible="true"] {
+      transform: translateX(0);
+    }
+
+    .nav-list {
+      flex-direction: column;
+    }
+  }
+}
+
+.mobile-nav-toggle {
+  position: relative;
+  z-index: 2000;
+  .icon-close {
+    display: none;
+  }
+
+  &[aria-expanded="true"] {
+    .icon-open {
+      display: none;
+    }
+    .icon-close {
+      display: block;
+    }
+  }
+
+  @include mixins.from-desktop {
+    display: none;
+  }
+}
+
+.nav-end {
+  @include mixins.flex-start;
+  gap: variables.$space-md;
+}

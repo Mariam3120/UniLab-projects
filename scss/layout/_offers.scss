@@ -1,0 +1,88 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.offers {
+  padding: 0 1.6rem;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -8rem; 
+
+  &__wrapper {
+    background-color: #000000;
+    border-radius: 2rem;
+    padding: 3.2rem 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    @include mixins.from-desktop {
+      max-width: variables.$container-width;
+      margin: 0 auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+      padding: 5.6rem 6.4rem;
+      border-radius: 2rem;
+    }
+  }
+
+  &__title {
+    font-family: variables.$font-display;
+    font-size: clamp(3.2rem, 2.4rem + 2vw, 4rem);
+    font-weight: variables.$fw-bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 1;
+
+    @include mixins.from-desktop {
+      flex: 1;
+      max-width: 55rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+
+    @include mixins.from-desktop {
+      flex: 0 0 auto;
+      width: 35rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6.2rem;
+    padding: 1.4rem 2rem 1.4rem 5.4rem; 
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: #000000;
+
+    &::placeholder {
+      color: #00000066;
+    }
+
+    &:focus {
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 6.2rem;
+    padding: 1.4rem 2rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: variables.$fw-medium;
+    color: #000000;
+
+  }
+}

@@ -1,0 +1,6 @@
+@use '../abstracts/variables';
+body {
+  min-height: 100vh;
+  font-family: variables.$font-body;
+  color: variables.$color-text;
+}
