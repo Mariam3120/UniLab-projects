@@ -338,7 +338,7 @@ label {
 }
 @media (min-width: 76.8rem) {
   .arrivals__wrapper {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1019607843);
     max-width: 124rem;
     margin: 0 auto;
   }
@@ -401,8 +401,8 @@ label {
   width: 100%;
   margin-top: 2.4rem;
   text-align: center;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  background-color: #FFFFFF;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1019607843);
   border-radius: 6.2rem;
   padding: 1.6rem 5.4rem;
 }
@@ -421,7 +421,6 @@ label {
 
 .product-card {
   display: block;
-  color: inherit;
 }
 .product-card__image {
   background-color: #f0f0f0;

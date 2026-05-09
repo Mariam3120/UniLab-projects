@@ -2,9 +2,9 @@
 @use "../abstracts/variables";
 
 .arrivals__wrapper {
-  padding-left: 1.6rem;
+  padding-left: variables.$space-lg;
   @include mixins.from-desktop {
-    border-bottom: 1px solid #0000001a;
+    border-bottom: 0.1rem solid variables.$color-border-gray;
     max-width: variables.$container-width;
     margin: 0 auto;
   }
@@ -15,21 +15,21 @@
 
   &__title {
     font-family: variables.$font-display;
-    font-size: 3.2rem;
+    font-size: variables.$fs-2xl;
     font-weight: variables.$fw-bold;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 3.2rem;
+    margin-bottom: variables.$space-3xl;
 
     @include mixins.from-desktop {
-      font-size: 4.8rem;
+      font-size: variables.$space-5xl;
       margin-bottom: 5.5rem;
     }
   }
 
   &__list {
     display: flex;
-    gap: 1.6rem;
+    gap: variables.$space-lg;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -45,7 +45,7 @@
     @include mixins.from-desktop {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+      gap: variables.$space-xl;
       overflow: visible;
       margin: 0;
       padding: 0;
@@ -66,17 +66,17 @@
   &__view-all {
     display: block;
     width: 100%;
-    margin-top: 2.4rem;
+    margin-top: variables.$space-2xl;
     text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #0000001a;
+    background-color: variables.$color-bg;
+    border: 0.1rem solid variables.$color-border-gray;
     border-radius: 6.2rem;
     padding: 1.6rem 5.4rem;
 
     span {
       font-weight: variables.$fw-medium;
       font-size: 1.4rem;
-      color: #000000;
+      color: variables.$color-text;
     }
 
     @include mixins.from-desktop {
@@ -89,14 +89,13 @@
 
 .product-card {
   display: block;
-  color: inherit;
 
   &__image {
-    background-color: #f0f0f0;
-    border-radius: 2rem;
+    background-color: variables.$color-bg-img;
+    border-radius: variables.$radius-border;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    margin-bottom: 1.2rem;
+    margin-bottom: variables.$space-md;
 
     img {
       width: 100%;
@@ -126,7 +125,7 @@
 
     &-old {
       font-weight: variables.$fw-bold;
-      color: rgba(0, 0, 0, 0.4);
+      color: variables.$color-old-numer;
       text-decoration: line-through;
 
     }
@@ -134,10 +133,10 @@
     &-discount {
       font-size: variables.$fs-xs;
       font-weight: variables.$fw-medium;
-      color: #ff3333;
-      background-color: #ff33331a;
+      color: variables.$color-discount;
+      background-color: variables.$color-bg-discount;
       padding: 0.4rem 1rem;
-      border-radius: 6.2rem;
+      border-radius: variables.$radius-pill;
     }
   }
 }
