@@ -297,20 +297,20 @@ label {
 }
 
 .partners {
-  background-color: #000;
+  background-color: #000000;
   padding: 2.8rem 1.6rem;
 }
 .partners .partners-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2.4rem 3.2rem;
 }
 .partners .partners-list li {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 .partners .partners-list li img {
   max-height: 2.4rem;

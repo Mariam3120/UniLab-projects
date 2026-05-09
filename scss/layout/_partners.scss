@@ -2,23 +2,19 @@
 @use "../abstracts/variables";
 
 .partners {
-  background-color: #000;
+  background-color: variables.$color-text;
   padding: 2.8rem 1.6rem;
 
   .partners-list {
-    display: flex;
+    @include mixins.flex-center;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 2.4rem 3.2rem;
 
     li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include mixins.flex-center;
 
       img {
-        max-height: 2.4rem;
+        max-height: variables.$space-2xl;
         width: auto;
         object-fit: contain;
       }
@@ -31,12 +27,12 @@
     .partners-list {
       flex-wrap: nowrap;
       justify-content: space-between;
-      gap: 4rem;
+      gap: variables.$space-4xl;
       max-width: variables.$container-width;
       margin: 0 auto;
 
       li img {
-        max-height: 3.6rem;
+        max-height: variables.$fs-mobile-lg;
       }
     }
   }
