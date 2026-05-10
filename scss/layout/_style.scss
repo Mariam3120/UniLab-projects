@@ -1,0 +1,109 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+
+.style {
+  padding: variables.$space-4xl variables.$space-lg;
+
+  @include mixins.from-desktop {
+    padding: variables.$space-5xl 0;
+  }
+}
+
+.style__wrapper {
+  padding: variables.$space-3xl variables.$space-2xl;
+  background-color: variables.$color-bg-hero;
+  border-radius: variables.$radius-border;
+
+  @include mixins.from-desktop {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+    padding: variables.$space-4xl variables.$space-5xl;
+  }
+}
+
+.style__title {
+  text-transform: uppercase;
+  font-family: variables.$font-display;
+  font-weight: variables.$fw-bold;
+  font-size: variables.$fs-2xl;
+  text-align: center;
+  margin-bottom: variables.$space-3xl;
+
+  @include mixins.from-desktop {
+    font-size: variables.$fs-4xl;
+    margin-bottom: variables.$space-4xl;
+  }
+}
+.style__grid {
+  display: grid;
+  gap: variables.$space-lg;
+  grid-template-columns: 1fr;
+
+  @include mixins.from-desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: variables.$space-xl;
+
+    .style-card--casual {
+      grid-column: 1 / 2;  
+    }
+
+    .style-card--formal {
+      grid-column: 2 / 4;   
+    }
+
+    .style-card--party {
+      grid-column: 1 / 3;   
+    }
+
+    .style-card--gym {
+      grid-column: 3 / 4;   
+    }
+  }
+}
+
+.style-card {
+  position: relative;
+  height: 19rem;
+  overflow: hidden;
+  border-radius: variables.$radius-border;
+  background-color: variables.$color-bg;
+  transition: transform 0.2s ease;
+  &:hover{
+    transform: translateY(-1rem);
+  }
+
+  @include mixins.from-desktop {
+    height: 28.4rem;
+  }
+}
+
+.style-card__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.style-card__label {
+  position: absolute;
+  top: variables.$space-xl;
+  left: variables.$space-2xl;
+  z-index: 2;
+  font-weight: variables.$fw-bold;
+  font-size: variables.$fs-xl;
+
+  @include mixins.from-desktop {
+    font-size: variables.$fs-2xl;
+  }
+}
+
+.style-card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 82%;
+  height: 120%;
+  object-fit: cover;
+  object-position: center 90%; 
+}
+
