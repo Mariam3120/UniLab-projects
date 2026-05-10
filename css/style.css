@@ -613,7 +613,7 @@ label {
   font-size: clamp(3.2rem, 2.4rem + 2vw, 4rem);
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFFFFF;
   line-height: 1;
 }
 @media (min-width: 76.8rem) {
@@ -636,7 +636,7 @@ label {
 }
 .offers__input {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border: none;
   border-radius: 6.2rem;
   padding: 1.4rem 2rem 1.4rem 5.4rem;
@@ -648,12 +648,12 @@ label {
   color: rgba(0, 0, 0, 0.4);
 }
 .offers__input:focus {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
+  outline: 0.2rem solid #FFFFFF;
+  outline-offset: 0.2rem;
 }
 .offers__submit {
   width: 100%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 6.2rem;
   padding: 1.4rem 2rem;
   font-family: inherit;
@@ -713,7 +713,7 @@ label {
   width: 2.8rem;
   height: 2.8rem;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.2);
   color: #000000;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -725,7 +725,7 @@ label {
 }
 .footer__social-link:hover {
   background-color: #000000;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .footer__nav {
   display: grid;
@@ -1037,6 +1037,57 @@ label {
   background-color: rgba(255, 51, 51, 0.1019607843);
   padding: 0.4rem 1rem;
   border-radius: 6.2rem;
+}
+
+.aside {
+  width: 100%;
+  background-color: #000000;
+  padding: 0.8rem 1.6rem;
+}
+
+.aside__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (min-width: 76.8rem) {
+  .aside__wrapper {
+    max-width: 124rem;
+    margin: 0 auto;
+  }
+}
+
+.aside__txt {
+  font-size: clamp(1.2rem, 1.05rem + 0.38vw, 1.6rem);
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.aside__txt ins {
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.aside__svg {
+  display: none;
+}
+@media (min-width: 76.8rem) {
+  .aside__svg {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter: invert(100%);
+    opacity: 0.9;
+  }
+}
+.aside__svg img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

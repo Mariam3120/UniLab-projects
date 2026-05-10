@@ -1,0 +1,51 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.aside {
+  width: 100%;
+  background-color: variables.$color-text;
+  padding: variables.$space-sm variables.$space-lg;
+}
+
+.aside__wrapper {
+  @include mixins.flex-center;
+  position: relative;
+
+  @include mixins.from-desktop {
+    max-width: variables.$container-width;
+    margin: 0 auto;
+  }
+}
+
+.aside__txt {
+  font-size: variables.$fs-fluid-stat-txt;
+  font-weight: variables.$fw-regular;
+  color: variables.$color-bg; 
+
+  ins {
+    text-decoration: underline;
+    font-weight: variables.$fw-medium;
+    cursor: pointer;
+  }
+}
+
+.aside__svg {
+  display: none; 
+
+  @include mixins.from-desktop {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    filter: invert(100%);
+    opacity: 0.9;
+  }
+
+  img {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+}
