@@ -1,16 +1,16 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
 
-.arrivals__wrapper {
+.sellings__wrapper {
   padding-left: variables.$space-lg;
   @include mixins.from-desktop {
-    border-bottom: 0.1rem solid variables.$color-border-gray;
+    // border-bottom: 0.1rem solid variables.$color-border-gray;
     max-width: variables.$container-width;
     margin: 0 auto;
   }
 }
 
-.arrivals {
+.sellings {
   padding: 5rem 1.6rem;
 
   &__title {
